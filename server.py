@@ -8,9 +8,9 @@ def index():
 def ninjas():
     return render_template("ninjas.html")
 
-@app.route('/dojos/new', methods=['POST'])
+@app.route('/dojos/new', methods=['GET', 'POST'])
 def dojo_new():
     name = request.form['name']
     email = request.form['email']
-    return render_template('dojo.html')
+    return render_template("dojo.html")
 app.run(debug=True)
