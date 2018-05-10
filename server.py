@@ -16,5 +16,5 @@ def display():
 def dojo_new():
     name = request.form['name']
     email = request.form['email']
-    return render_template("new.html")
+    return render_template("new.html", name=name, email=email)
 app.run(debug=True)
